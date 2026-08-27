@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "main.py"
+    }
+  ],
+  "env": {
+    "ICMR_PARALLEL": "1",
+    "ICMR_THREADS_PER_CONN": "1"
+  }
+}
